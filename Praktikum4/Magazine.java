@@ -1,10 +1,13 @@
 package Praktikum4;
+public class Magazine extends Book {
+    private String genre;
 
-public class Magazine {
+    public Magazine(String title, String author, String genre) {
+        super(title, author);
+        this.genre = genre;
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+    public String getGenre() {
+        return genre;
+    }
 }
