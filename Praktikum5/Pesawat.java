@@ -1,32 +1,28 @@
 package Praktikum5;
 
 public class Pesawat extends Kendaraan implements TransportasiUdara, Maskapai {
-    String jenisPesawat;
-    String maskapai;
 
-    public Pesawat(String merk, String model, int tahunProduksi, String jenisPesawat, String maskapai) {
-        super(merk, model, tahunProduksi);
-        this.jenisPesawat = jenisPesawat;
-        this.maskapai = maskapai;
-    }
+	public Pesawat(String merk, String model, int tahunProduksi) {
+		super(merk, model, tahunProduksi);
+	}
 
-    @Override
-    public void nyalakanMesin() {
-        System.out.println("Pesawat dinyalakan menggunakan turbine engine start.");
-    }
+	@Override
+	public void nyalakanMesin() {
+		System.out.println("Nyalakan Mesin: Bersiap lepas Landas");
+	}
+	
+	@Override
+	public String jenisBahanBakar() {
+		return "Avtur";
+	}
 
-    @Override
-    public String jenisBahanBakar() {
-        return "Avtur";
-    }
+	@Override
+	public String namaMaskapai() {
+		return "Garuda Indonesia";
+	}
 
-    @Override
-    public void jenisPenerbangan() {
-        System.out.println("Jenis penerbangan: Komersial.");
-    }
-
-    @Override
-    public String namaMaskapai() {
-        return maskapai;
-    }
+	@Override
+	public String jenisPenerbangan() {
+		return "Penerbangan Domestik";
+	}
 }
