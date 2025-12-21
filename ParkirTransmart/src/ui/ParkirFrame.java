@@ -59,7 +59,6 @@ public class ParkirFrame extends JFrame {
         form.add(btnHitung);
         form.add(btnSimpan);
 
-        // ===== TABLE =====
         model = new DefaultTableModel(
                 new String[]{"Plat", "Jenis", "Tarif"}, 0
         );
@@ -72,7 +71,7 @@ public class ParkirFrame extends JFrame {
         add(main);
     }
 
-    // ================= HITUNG TARIF =================
+    
     private void hitungTarif() {
         try {
             Parkir p = service.hitungTarif(
@@ -95,7 +94,7 @@ public class ParkirFrame extends JFrame {
         }
     }
 
-    // ================= SIMPAN =================
+   
     private void simpan() {
         try {
             service.simpanParkir();
@@ -113,3 +112,4 @@ public class ParkirFrame extends JFrame {
         lblTarif.setText("Rp 0");
     }
 }
+
